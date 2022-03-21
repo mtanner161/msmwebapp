@@ -2,7 +2,7 @@
   "name": "msm-web-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mtanner161.github.io/msm-web-app",
+  "homepage": "https://mtanner161.github.io/msmwebapp",
   "dependencies": {
     "@emotion/react": "^11.8.1",
     "@emotion/styled": "^11.8.1",

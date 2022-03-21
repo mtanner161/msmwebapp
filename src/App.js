@@ -11,7 +11,7 @@ function App() {
     <div>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/msmwebapp" element={<Home />} />
         <Route path="Run%20App" element={<Run />} />
         <Route path="About" element={<About />} />
         <Route path="Github" element={<Github />} />

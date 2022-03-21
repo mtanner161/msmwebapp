@@ -54,7 +54,10 @@ const ResponsiveAppBar = () => {
               component="div"
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
-              <Link style={{ textDecoration: "none", color: "white" }} to="/">
+              <Link
+                style={{ textDecoration: "none", color: "white" }}
+                to="/msmwebapp"
+              >
                 Mines Mineral Model
               </Link>
             </Typography>
