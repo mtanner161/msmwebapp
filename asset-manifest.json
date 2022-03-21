@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/msmwebapp/static/css/main.5bf4c5bc.css",
-    "main.js": "/msmwebapp/static/js/main.3f51a273.js",
+    "main.js": "/msmwebapp/static/js/main.2cfa7228.js",
     "static/js/787.e7445237.chunk.js": "/msmwebapp/static/js/787.e7445237.chunk.js",
     "static/media/blaster.jpg": "/msmwebapp/static/media/blaster.9c9da998507855303bf8.jpg",
     "index.html": "/msmwebapp/index.html",
     "main.5bf4c5bc.css.map": "/msmwebapp/static/css/main.5bf4c5bc.css.map",
-    "main.3f51a273.js.map": "/msmwebapp/static/js/main.3f51a273.js.map",
+    "main.2cfa7228.js.map": "/msmwebapp/static/js/main.2cfa7228.js.map",
     "787.e7445237.chunk.js.map": "/msmwebapp/static/js/787.e7445237.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5bf4c5bc.css",
-    "static/js/main.3f51a273.js"
+    "static/js/main.2cfa7228.js"
   ]
 }
