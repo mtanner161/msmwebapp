@@ -15,6 +15,7 @@ import MineralModelFunctions from "./MineralModelFunctions";
 const DemandChart = (props) => {
   const data = props.value;
   let dataArray = MineralModelFunctions.parseJsonFile(data);
+  let labels = dataArray[0];
   console.log(dataArray);
 
   return (
@@ -27,12 +28,12 @@ const DemandChart = (props) => {
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="year" />
       <YAxis
-        label={{ value: "1000-Tons", angle: -90, position: "left" }}
+        label={{ value: "Kilotons", angle: -90, position: "left" }}
         domain={["dataMin", "dataMax" + 1000]}
       />
       <Tooltip />
       <Legend layout="vertical" align="right" verticalAlign="middle" />
-      <Line type="monotone" dataKey="aluminum" stroke="red" dot={false} />
+      <Line type="monotone" dataKey={labels[2]} stroke="red" dot={false} />
       <Line type="monotone" dataKey="iron" stroke="black" dot={false} />
       <Line type="monotone" dataKey="nickel" stroke="blue" dot={false} />
     </LineChart>

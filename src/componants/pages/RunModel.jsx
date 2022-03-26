@@ -36,38 +36,68 @@ function RunModel() {
 
     var TotalMaterialFlowInFromVirgin = JSON.parse(sessionStorage.getItem('TotalMaterialFlowInFromVirgin'));
 
-    var results = "["
-    for (var i = 0; i < yearsInList.length-1; i++) 
+    var resultsDemand = "["
+    for (let i = 0; i < yearsInList.length-1; i++) 
     {
-        results = results + "{" + '"id":' + i + "," +'"year":' + yearsInList[i+1] + ","
-        for (var j = 0; j < completeMaterialList.length; j++)
+        resultsDemand = resultsDemand + "{" + '"id":' + i + "," +'"year":' + yearsInList[i+1] + ","
+        for (let j = 0; j < completeMaterialList.length; j++)
         {
             let temp = TotalMaterialFlowInFromVirgin[i][j]/1000
-            results = results + '"' + completeMaterialList[j] + '":' + (Math.round(temp*100)/100)
+            resultsDemand = resultsDemand + '"' + completeMaterialList[j] + '":' + (Math.round(temp*100)/100)
             if (j < completeMaterialList.length - 1)
             {
-                results = results + ","
+                resultsDemand = resultsDemand + ","
             }
         }
         if (i < yearsInList.length-2)
         {
-            results = results + "},"
+            resultsDemand = resultsDemand + "},"
         } else {
-            results = results + "}"
+            resultsDemand = resultsDemand + "}"
         }
     }
-    results = results + "]"
+
+    var resultsDemand = resultsDemand + "]"
+
+
+     // Recycle Material
+    var resultsDemandRR = "["
+    for (let i = 0; i < yearsInList.length-1; i++) 
+    {
+        resultsDemandRR = resultsDemandRR + "{" + '"id":' + i + "," +'"year":' + yearsInList[i+1] + ","
+        for (let j = 0; j < completeMaterialList.length; j++)
+        {
+            let temp = TotalMaterialFlowInFromRR[i][j]/1000
+            resultsDemandRR = resultsDemandRR + '"' + completeMaterialList[j] + '":' + (Math.round(temp*100)/100)
+            if (j < completeMaterialList.length - 1)
+            {
+                resultsDemandRR = resultsDemandRR + ","
+            }
+        }
+        if (i < yearsInList.length-2)
+        {
+            resultsDemandRR = resultsDemandRR + "},"
+        } else {
+            resultsDemandRR = resultsDemandRR + "}"
+        }
+    }
+    resultsDemandRR = resultsDemandRR + "]"
 
     return (
         
         <div className="background">
             <h1>Total Demand for Numerous Minerals</h1>
             <div className="chart-background">
-                <DemandChart value = {JSON.parse(results)} />
+                <DemandChart value = {JSON.parse(resultsDemand)} />
             </div>
-            
+            <div className='chart-background'>
+                <DemandChart value={JSON.parse(resultsDemandRR)} />
+            </div>
             <div className="table-container">
-                <DemandData value = {JSON.parse(results)} />
+                <DemandData value = {JSON.parse(resultsDemand)} />
+            </div>
+            <div className='table-container'>
+                <DemandData value={JSON.parse(resultsDemandRR)} />
             </div>
             
         </div>
