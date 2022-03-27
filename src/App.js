@@ -7,11 +7,11 @@ import Run from "./componants/pages/RunModel";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Navbar />
       <Routes>
         <Route path="/msmwebapp" element={<Home />} />
-        <Route path="Run%20App" element={<Run />} />
+        <Route path="Two%20Degree" element={<Run />} />
         <Route path="Github" element={<Github />} />
       </Routes>
     </div>

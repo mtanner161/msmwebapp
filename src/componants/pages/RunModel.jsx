@@ -86,8 +86,11 @@ function RunModel() {
     return (
         
         <div className="background">
-            <h1>Total Demand for Minerals Given IEA Beyond Two Degree</h1>
-            <h2 className='text-align-center'>Material </h2>
+            <br></br>
+            <div>
+                <h1>Total Demand for Minerals Given IEA Beyond Two Degree</h1>
+            </div>
+            <h2 className='text-align-center'>Virgin Mineral Demand </h2>
             <div className="chart-background">
                 <DemandChart value = {JSON.parse(resultsDemand)} />
                 <DemandChart value={JSON.parse(resultsDemandRR)} />
