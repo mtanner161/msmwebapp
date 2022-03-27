@@ -36,6 +36,7 @@ const DemandChart = (props) => {
       <Line type="monotone" dataKey={labels[2]} stroke="red" dot={false} />
       <Line type="monotone" dataKey="iron" stroke="black" dot={false} />
       <Line type="monotone" dataKey="nickel" stroke="blue" dot={false} />
+      <Line type="monotone" dataKey="copper" stroke="green" dot={false} />
     </LineChart>
   );
 };

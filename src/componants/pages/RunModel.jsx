@@ -11,6 +11,7 @@ import MineralModel from "../MineralModel";
 import DemandData from "../DemandData";
 import DemandChart from '../DemandChart';
 import "../Run.css"
+import Grid from '@mui/material/Grid';
 
 function RunModel() {
 
@@ -36,6 +37,7 @@ function RunModel() {
 
     var TotalMaterialFlowInFromVirgin = JSON.parse(sessionStorage.getItem('TotalMaterialFlowInFromVirgin'));
 
+    // Creating the custom JSON file used for data and charts
     var resultsDemand = "["
     for (let i = 0; i < yearsInList.length-1; i++) 
     {
@@ -88,19 +90,23 @@ function RunModel() {
         <div className="background">
             <br></br>
             <div>
-                <h1>Total Demand for Minerals Given IEA Beyond Two Degree</h1>
+                <h1>IEA Beyond Two Degree Model Results</h1>
             </div>
-            <h2 className='text-align-center'>Virgin Mineral Demand </h2>
+            <h2 className='text-align-center'>Virgin Mineral Demand For Selected Minerals (Left) and Assoicated Recyclying Rates (Right) in Kilotons</h2>
             <div className="chart-background">
                 <DemandChart value = {JSON.parse(resultsDemand)} />
                 <DemandChart value={JSON.parse(resultsDemandRR)} />
             </div>
-            <div className='chart-background'>
-            </div>
-            <div className="table-container">
-                <DemandData value = {JSON.parse(resultsDemand)} />
-                <DemandData value={JSON.parse(resultsDemandRR)} />
-            </div>
+            <br></br>
+            <h2>Data For Virgin Mineral Demand For Selected Minerals (Left) and Assoicated Recyclying Rates (Right) in Kilotons</h2> 
+            <Grid container spacing={2} justifyContent="center" alignItems="center" paddingTop={3} paddingBottom={10}> 
+                  <Grid item xs={5}>
+                     <DemandData value = {JSON.parse(resultsDemand)} />
+                  </Grid>
+                <Grid item xs={5}> 
+                     <DemandData value={JSON.parse(resultsDemandRR)} />
+                </Grid>
+            </Grid>
         </div>
     )
 

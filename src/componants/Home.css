@@ -5,6 +5,16 @@
   color: beige;
 }
 
+.accordion {
+  height: "100%";
+  display: flexbox;
+  margin-left: auto;
+  margin-right: auto;
+  width: 750px;
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+
 .image {
   padding: 15px;
   background-color: aliceblue;
