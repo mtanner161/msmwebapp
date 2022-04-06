@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 import Blaster from "./images/blaster.jpg";
 
 const pages = ["Two Degree", "About", "GitHub"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["Profile", "Logout"];
 
 const darkTheme = createTheme({
   palette: {
@@ -45,7 +45,7 @@ const ResponsiveAppBar = () => {
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <AppBar position="static">
+      <AppBar position="sticky">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Typography
