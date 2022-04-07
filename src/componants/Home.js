@@ -22,7 +22,9 @@ const Home = () => {
         <div className="padding-left">
           <StepperBetter />
         </div>
-        <Accordion />
+        <div className="width">
+          <Accordion />
+        </div>
       </div>
     </div>
   );

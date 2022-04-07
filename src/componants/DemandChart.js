@@ -20,10 +20,10 @@ const DemandChart = (props) => {
 
   return (
     <LineChart
-      width={750}
+      width={650}
       height={250}
       data={data}
-      margin={{ top: 5, right: 30, left: 30, bottom: 5 }}
+      margin={{ top: 5, right: 10, left: 10, bottom: 5 }}
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="year" padding={{ left: 30, right: 30 }} />

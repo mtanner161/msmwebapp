@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+ import React, {Component} from 'react'
 import StocksData from "../Data/StocksData.json";
 import LifeTimeData from "../Data/CurrentProductionData.json";
 import TechSharesData from "../Data/TechSharesData.json";
