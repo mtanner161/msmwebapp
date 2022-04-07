@@ -15,7 +15,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Link } from "react-router-dom";
 import Blaster from "./images/blaster.jpg";
 
-const pages = ["Two Degree", "About", "GitHub"];
+const pages = ["Two Degree", "Model", "About", "GitHub"];
 const settings = ["Profile", "Logout"];
 
 const darkTheme = createTheme({

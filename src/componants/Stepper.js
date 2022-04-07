@@ -7,25 +7,27 @@ import StepContent from "@mui/material/StepContent";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
 
 const steps = [
   {
-    label: "Select campaign settings",
-    description: `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`,
+    label: "Choose Your Model",
+    description: `Click the Model tab in in the navigation bar to choose a specific IEA energy scenerio to run`,
   },
   {
-    label: "Create an ad group",
+    label: "View/Export Results",
     description:
-      "An ad group contains one or more ads which target a shared set of keywords.",
+      "Examine the results via charts and export any data needed to further analysis in other tools. ",
   },
   {
-    label: "Create an ad",
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
+    label: "Analysis",
+    description: `The goal of this model is for users to extend and utilize these results in order to help drive a clearer understand of the minerals required to complete these energy transition scenerios`,
   },
 ];
 
@@ -46,46 +48,48 @@ export default function StepperBetter() {
 
   return (
     <Box sx={{ maxWidth: 600 }}>
-      <Stepper
-        activeStep={activeStep}
-        orientation="vertical"
-        sx={{ color: "white" }}
-      >
-        {steps.map((step, index) => (
-          <Step key={step.label} sx={{ color: "white" }}>
-            <StepLabel>{step.label}</StepLabel>
-            <StepContent>
-              <Typography>{step.description}</Typography>
-              <Box sx={{ mb: 2 }}>
-                <div>
-                  <Button
-                    variant="contained"
-                    onClick={handleNext}
-                    sx={{ mt: 1, mr: 1 }}
-                  >
-                    {index === steps.length - 1 ? "Finish" : "Continue"}
-                  </Button>
-                  <Button
-                    disabled={index === 0}
-                    onClick={handleBack}
-                    sx={{ mt: 1, mr: 1 }}
-                  >
-                    Back
-                  </Button>
-                </div>
-              </Box>
-            </StepContent>
-          </Step>
-        ))}
-      </Stepper>
-      {activeStep === steps.length && (
-        <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography>All steps completed - you&apos;re finished</Typography>
-          <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-            Reset
-          </Button>
-        </Paper>
-      )}
+      <ThemeProvider theme={darkTheme}>
+        <Stepper
+          activeStep={activeStep}
+          orientation="vertical"
+          sx={{ color: "white" }}
+        >
+          {steps.map((step, index) => (
+            <Step key={step.label} sx={{ color: "white" }}>
+              <StepLabel>{step.label}</StepLabel>
+              <StepContent>
+                <Typography>{step.description}</Typography>
+                <Box sx={{ mb: 2 }}>
+                  <div>
+                    <Button
+                      variant="contained"
+                      onClick={handleNext}
+                      sx={{ mt: 1, mr: 1 }}
+                    >
+                      {index === steps.length - 1 ? "Finish" : "Continue"}
+                    </Button>
+                    <Button
+                      disabled={index === 0}
+                      onClick={handleBack}
+                      sx={{ mt: 1, mr: 1 }}
+                    >
+                      Back
+                    </Button>
+                  </div>
+                </Box>
+              </StepContent>
+            </Step>
+          ))}
+        </Stepper>
+        {activeStep === steps.length && (
+          <Paper square elevation={0} sx={{ p: 3 }}>
+            <Typography>All steps completed - you&apos;re finished</Typography>
+            <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
+              Reset
+            </Button>
+          </Paper>
+        )}
+      </ThemeProvider>
     </Box>
   );
 }

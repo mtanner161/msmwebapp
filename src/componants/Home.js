@@ -13,11 +13,15 @@ const Home = () => {
       <h1>Mines Mineral Model</h1>
       <h2>by Michael Tanner and Wilson Martin</h2>
       <br></br>
-      <div className="stepper">
-        <StepperBetter />
-      </div>
+      <h2>
+        How to use the model and development phases January 2021 through May
+        2022
+      </h2>
       <br></br>
-      <div className="accordion">
+      <div className="stepper">
+        <div className="padding-left">
+          <StepperBetter />
+        </div>
         <Accordion />
       </div>
     </div>
