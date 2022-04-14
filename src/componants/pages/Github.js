@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import "./Github.css";
+import "../Github.css";
 
 const Github = () => {
   const link = "https://github.com/mtanner161/msmwebapp";

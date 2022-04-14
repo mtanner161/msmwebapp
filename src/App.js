@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
 import "./App.css";
-import Github from "./componants/Github";
+import Github from "./componants/pages/Github";
 import Home from "./componants/Home";
 import Navbar from "./componants/Navbar";
 import Run from "./componants/pages/RunModel";
