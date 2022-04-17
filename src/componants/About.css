@@ -1,9 +1,11 @@
 .center {
-padding-left: 10px;
-justify-content: center;
-margin-left: auto;
-margin-right: auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding-top: 60px;
 }
+
 
 .color-text{
     color: #FFFFFF;

@@ -11,7 +11,7 @@ const Home = () => {
       <br></br>
       <img src={CSM} className="image" width="750"></img>
       <h1>Mines Mineral Model</h1>
-      <h2>by Michael Tanner and Wilson Martin</h2>
+      <h2>by Michael Tanner and Clark Martin</h2>
       <br></br>
       <h2>
         How to use the model and development phases January 2021 through May

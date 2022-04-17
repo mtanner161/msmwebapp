@@ -14,7 +14,7 @@ const AccordionComp = () => {
   });
 
   var phaseOne =
-    "Refine and get Mines Mineral Model running from orginal team, cleaning up MATLAB code and translate into Python";
+    "Debug and get MATLAB model working, then covert to Python, begin open-source customization";
 
   var phaseTwo =
     "Convert to node.js - begin to build frontend - finalize open source version";
