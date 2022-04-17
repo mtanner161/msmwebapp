@@ -1,6 +1,18 @@
+@import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/d49b91b3/stylesheets/one-dark.css');
+
 .background-color {
   background-color: #191c21;
   height: 100vh;
   text-align: center;
   color: beige;
 }
+
+.code{
+  padding-top: 10px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+

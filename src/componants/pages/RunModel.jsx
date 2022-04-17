@@ -30,7 +30,7 @@ function RunModel() {
     // Retrive saved data from Mineral Model
 
     var TotalMaterialFlowInFromRR = JSON.parse(sessionStorage.getItem('TotalMaterialFlowInFromRR'));
-
+    var TotalMarketSizeMed = JSON.parse(sessionStorage.getItem('TotalVirginMarketSizeMedium')); 
     var value = JSON.parse(sessionStorage.getItem('YearsAndMaterialList'));
     var yearsInList = value[0];
     var completeMaterialList = value[1];
@@ -84,6 +84,31 @@ function RunModel() {
         }
     }
     resultsDemandRR = resultsDemandRR + "]"
+
+      // Market Size
+      var resultsMarketSize = "["
+      for (let i = 0; i < yearsInList.length-1; i++) 
+      {
+          resultsMarketSize = resultsMarketSize + "{" + '"id":' + i + "," +'"year":' + yearsInList[i+1] + ","
+          for (let j = 0; j < completeMaterialList.length; j++)
+          {
+              let temp = TotalMarketSizeMed[i][j]/1000
+              resultsMarketSize = resultsMarketSize + '"' + completeMaterialList[j] + '":' + (Math.round(temp*100)/100)
+              if (j < completeMaterialList.length - 1)
+              {
+                  resultsMarketSize = resultsMarketSize + ","
+              }
+          }
+          if (i < yearsInList.length-2)
+          {
+              resultsMarketSize = resultsMarketSize + "},"
+          } else {
+              resultsMarketSize = resultsMarketSize + "}"
+          }
+      }
+      resultsMarketSize = resultsMarketSize + "]"
+
+      console.log(resultsMarketSize);
 
     return (
         

@@ -12,7 +12,7 @@ const About = () => {
         <CardBetter />
         <CardClark />
       </div>
-
+      <br></br>
       <iframe
         frameborder="0"
         scrolling="no"
