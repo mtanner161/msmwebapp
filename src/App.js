@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/msmwebapp" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="Two%20Degree" element={<Run />} />
         <Route path="Model" element={<Model />} />
         <Route path="Github" element={<Github />} />

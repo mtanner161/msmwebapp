@@ -56,7 +56,7 @@ const ResponsiveAppBar = () => {
             >
               <Link
                 style={{ textDecoration: "none", color: "white" }}
-                to="/msmwebapp"
+                to="/"
               >
                 Mines Mineral Model
               </Link>
